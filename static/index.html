@@ -10,10 +10,14 @@
     <script defer src="/js/bootstrap.bundle.min.js"></script>
     <script async src="https://www.baqend.com/js-sdk/latest/baqend.min.js"></script>
     <!-- Install Speed Kit -->
-    <script src="https://pwa.app.baqend.com/v1/speedkit/install.js?d=pwa" async="" crossorigin="anonymous"></script>
+    <!-- <script src="https://pwa.app.baqend.com/v1/speedkit/install.js?d=pwa" async="" crossorigin="anonymous"></script> -->
     <script src="/js/script.js"></script>
     <title>Rick and Morty Fan Shop</title>
-
+    <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register('/sw.js')
+      }
+    </script>
 </head>
 
 <body>
